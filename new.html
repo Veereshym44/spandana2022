@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>My Carousel Demo</title>
+    <link rel="stylesheet" type="text/css" href="css.css">
+</head>
+<body>
+    <nav class="navigation" id="navigation">
+        <div class="container">
+          <div class="logo">
+          <img src="./LOGO 3_prev_ui.png" width="100" alt="">
+          <h3>ಸ್ಪಂದನ-೨೨</h3>
+          </div>
+          <ul class="navigation-links">
+            <li>HOME</li>
+            <li>EVENTS</li>
+            <li class="active">REGISTRATION</li>
+            <li>RESULTS</li>
+            <li>GALLERY</li>
+            <a href="javascript:void(0);" class="icon" onclick="responsiveMenu()">
+              <i class="fa fa-bars"></i>
+            </a>
+          </ul>
+        </div>
+      </nav>
+<div class="galleryContainer">
+    <div class="slideShowContainer">
+        
+        <div onclick="plusSlides(-1)" class="nextPrevBtn leftArrow"><span class="arrow arrowLeft"></span></div>
+        <div onclick="plusSlides(1)" class="nextPrevBtn rightArrow"><span class="arrow arrowRight"></span></div>
+        <div class="captionTextHolder"><p class="captionText slideTextFromTop"></p></div>
+        <div class="imageHolder">
+            <img src="./image2.JPG">1366X768
+            <p class="captionText"></p>
+        </div>
+        <div class="imageHolder">
+            <img src="./image5.JPG">
+            <p class="captionText"></p>
+        </div>
+        <div class="imageHolder">
+            <img src="./image3.JPG">
+            <p class="captionText"></p>
+        </div>
+        <div class="imageHolder">
+            <img src="./image4.JPG">
+            <p class="captionText"></p>
+        </div>
+        <div class="imageHolder">
+            <img src="././image6.jpeg">
+            <p class="captionText"></p>
+        </div>
+    </div>
+    <div id="dotsContainer"></div>
+</div>
+<script src="myScript.js"></script>
+</body>
+</html>

@@ -29,23 +29,39 @@
         </ul>
       </div>
     </nav>
-
-  
-    <section class="row">
-      <div class="nine columns">
-        <div class="coverflow top10 bot10">
-          <a class="prev-arrow"></a>
-          <a href=""><img src="./image2.JPG" class="coverflow__image" /></a>
-          <a href=""><img src="./image3.JPG" class="coverflow__image" /></a>
-          <a href=""><img src="./image4.JPG" class="coverflow__image" /></a>
+    <div class="galleryContainer">
+      <div class="slideShowContainer">
           
-          <a href=""><img src="./LOGO 3_prev_ui.png" class="coverflow__image" alt=""></a>
-          <a href=""><img src="./image6.jpeg" class="coverflow__image" /></a>
-          <a href=""><img src="./image5.JPG" class="coverflow__image" /></a>
-          <a class="next-arrow"></a>
-        </div>
+          <div onclick="plusSlides(-1)" class="nextPrevBtn leftArrow"><span class="arrow arrowLeft"></span></div>
+          <div onclick="plusSlides(1)" class="nextPrevBtn rightArrow"><span class="arrow arrowRight"></span></div>
+          <div class="captionTextHolder"><p class="captionText slideTextFromTop"></p></div>
+          <div class="imageHolder">
+              <img src="./image2.JPG">1366X768
+              <p class="captionText"></p>
+          </div>
+          <div class="imageHolder">
+              <img src="./image5.JPG">
+              <p class="captionText"></p>
+          </div>
+          <div class="imageHolder">
+              <img src="./image3.JPG">
+              <p class="captionText"></p>
+          </div>
+          <div class="imageHolder">
+              <img src="./image4.JPG">
+              <p class="captionText"></p>
+          </div>
+          <div class="imageHolder">
+              <img src="././image6.jpeg">
+              <p class="captionText"></p>
+          </div>
       </div>
-    </section>
+      <div id="dotsContainer"></div>
+  </div>
+  <script src="myScript.js"></script>
+  
+    
+    
    
     <!--End of slide show-->
  <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
