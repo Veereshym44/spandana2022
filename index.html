@@ -4,15 +4,17 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>ಸ್ಪಂದನ-೨೨|Spandana-22</title>
-    <link rel = "icon" href ="./LOGO 3_prev_ui.png" 
+    <link rel = "icon" href ="./TEXT.jpg" 
         type = "image/x-icon">
     <script src="https://kit.fontawesome.com/b0524b407d.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./styles.scss">
+    <script type="text/javascript" src="./lib/jquery-3.3.1.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
   </head>
   <body>
-     
+
+     <div>
     <nav class="navigation" id="navigation">
       <div class="container">
         <div class="logo">
@@ -20,18 +22,46 @@
         <h3>ಸ್ಪಂದನ-೨೨</h3>
         </div>
         <ul class="navigation-links">
-          <li>HOME</li>
-          <li>EVENTS</li>
-          <li class="active">REGISTRATION</li>
-          <li>RESULTS</li>
-          <li>GALLERY</li>
+          <a href=""><li>HOME</li></a>
+        <a href="">  <li>EVENTS</li></a>
+         <a href=""> <li class="active">REGISTRATION</li></a>
+          <a href=""><li>RESULTS</li></a>
+          <a href="#gallery"><li>GALLERY</li></a>
           <a href="javascript:void(0);" class="icon" onclick="responsiveMenu()">
             <i class="fa fa-bars"></i>
           </a>
         </ul>
       </div>
-    </nav>
-    <div class="galleryContainer">
+      </nav>
+      </div>
+<main>
+  <div class="Hero">
+
+    <div class="about">
+      <img src="./LOGO 3_prev_ui.png" alt="">
+      <div class="about-info">
+        <h1>
+          ಸ್ಪಂದನ-೨೨
+        </h1>
+  <p>
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique, inventore. Placeat dolores saepe facere sed! Laborum incidunt quae perferendis numquam, quos iste alias vero provident laboriosam asperiores quisquam? Debitis, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat rem eius excepturi ipsum quisquam nemo ratione omnis earum, odio repudiandae numquam inventore sed unde iure, possimus sequi ad obcaecati? Tempore.
+  </p>
+  
+      </div>
+    
+
+    </div>
+    <div id="timer" >
+      <div id="days" class="timer-comp"></div>
+      <div id="hours"class="timer-comp"></div>
+      <div id="minutes"class="timer-comp"></div>
+      <div id="seconds"class="timer-comp"></div>
+  </div>
+  </div>
+</main>
+<h1 style="text-align: center;">Our Gallery</h1>
+    <div class="galleryContainer" id="gallery">
+    
       <div class="slideShowContainer">
           
           <div onclick="plusSlides(-1)" class="nextPrevBtn leftArrow"><span class="arrow arrowLeft"></span></div>
@@ -60,6 +90,15 @@
       </div>
       <div id="dotsContainer"></div>
   </div>
+<div class="video">
+  <video controls>
+    <source src="./video.mp4" type="video/mp4">
+  </video>
+  <video controls>
+    <source src="./spandanavideo.mp4" type="video/mp4">
+  </video>
+</div>
+
   <script src="myScript.js"></script>
   
     
@@ -67,6 +106,8 @@
    
     <!--End of slide show-->
  <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+ <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
     <script src="./index.js"></script>
     
