@@ -303,11 +303,10 @@ html,body{
       -webkit-transition: all .8s; /* Safari prior 6.1 */
   transition: all .8s;
   }
-  .about{
-    flex-direction: column;
-  }
+
 
 }
+
 
 .about{
   display: flex;
@@ -372,6 +371,13 @@ border-radius:10px ;
   }
   .video video{
     width: 100%;
+  }
+  .about{
+    flex-direction: column;
+    margin: auto;
+  }
+  .timer-comp{
+    height: 5rem;
   }
   
 }
