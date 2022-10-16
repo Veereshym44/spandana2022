@@ -487,3 +487,48 @@ border-radius:10px ;
 .profile-cards{
   margin: 3rem 2rem;
 }
+footer{
+  background-color: #000000;
+  color: #fff;
+  padding: 2rem 1rem 1rem;
+  
+}
+.copyright{
+  text-align: center;
+
+  margin-bottom: -2rem;
+}
+.footer-div{
+width: 90%;
+display: flex;
+gap: 1.5rem;
+margin: auto;
+}
+
+ .sit-location{
+  width:30rem;
+  height: 18rem;
+}
+.contactus{
+  display: flex;
+  flex-direction:column;
+  font-size: 2.3rem;
+  gap: 1rem;
+}
+@media(max-width:1000px){
+  .footer-div{
+    flex-direction:column;
+    width: 100%;
+  }
+  .about-clg{
+    display: none;
+    
+  }
+.contactus{
+  flex-direction: row;
+  justify-content: center;
+}
+ .sit-location{
+  width: 95%;
+ }
+}
