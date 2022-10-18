@@ -323,27 +323,29 @@ text-align: center;
 #timer{
   display: flex;
   width: 95%;
-  gap:2%;
-  margin: 0 0 0 1rem;
+  gap:1rem;
 
   justify-content: center;
   align-items: center;
   
 }
-.timer-comp{
+.team-content a{
+  text-decoration: none;
+}
+ .timer-comp{
   width: 21%;
   height: 4rem;
   border-radius:5px ;
 text-align: center;
 color: #fff;
-
+font-size: 1rem;
 padding: 1rem 0;
 font-size: large;
 font-weight:500;
 font-style: roboto;
-
+list-style: none;
 background: rgb(0, 0, 0);
-}
+} 
 .Hero{
   margin: 1rem 0;
 }
@@ -377,8 +379,16 @@ border-radius:10px ;
     flex-direction: column;
     margin: 0 auto;
   }
+  #timer{
+    justify-content: space-between;
+    
+
+  }
   .timer-comp{
-    height: 4.5rem;
+    height: auto;
+    font-size: .8rem;
+   
+    margin:auto;
   }
   
 }
