@@ -99,7 +99,7 @@ function playPauseSlides() {
     }
 }
 function makeTimer() {
-    var endTime = new Date(" November 24, 2022 00:00:00 PDT");
+    var endTime = new Date(" November 24, 2022 00:00:00 UTC");
     var endTime = (Date.parse(endTime)) / 1000;
     var now = new Date();
     var now = (Date.parse(now) / 1000);
