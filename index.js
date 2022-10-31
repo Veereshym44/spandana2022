@@ -133,7 +133,7 @@ function playPauseSlides() {
             document.getElementById("seconds").innerText = Math.floor((distance % (minute)) / second);
   
           //do something later when date is reached
-       git 
+    
           //seconds
         }, 0)
     }());
