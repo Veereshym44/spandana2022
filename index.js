@@ -81,6 +81,11 @@ function moveSlide(n){
     }
 
 }
+const hamburger=document.querySelector(".hamburger");
+const navList=document.querySelector(".nav-list");
+hamburger.addEventListener('click',()=>{
+    navList.classList.toggle("active");
+})
 var timer=null;
 function setTimer(){
     timer=setInterval(function () {
