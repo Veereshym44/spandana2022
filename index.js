@@ -1,144 +1,141 @@
 
-function responsiveMenu() {
-    var x = document.getElementById("navigation");
-    if (x.className === "navigation") {
-      x.className += " responsive";
-    } else {
-      x.className = "navigation";
-    }
-  }
-  
-var slideIndex,slides,dots,captionText;
-function initGallery(){
-    slideIndex = 0;
-    slides=document.getElementsByClassName("imageHolder");
-    slides[slideIndex].style.opacity=1;
 
-    captionText=document.querySelector(".captionTextHolder .captionText");
-    captionText.innerText=slides[slideIndex].querySelector(".captionText").innerText;
-
-    //disable nextPrevBtn if slide count is one
-    if(slides.length<2){
-        var nextPrevBtns=document.querySelector(".leftArrow,.rightArrow");
-        nextPrevBtns.style.display="none";
-        for (i = 0; i < nextPrevBtn.length; i++) {
-            nextPrevBtn[i].style.display="none";
+    function responsiveMenu() {
+        var x = document.getElementById("navigation");
+        if (x.className === "navigation") {
+          x.className += " responsive";
+        } else {
+          x.className = "navigation";
         }
-    }
-
-    //add dots
-    dots=[];
-    var dotsContainer=document.getElementById("dotsContainer"),i;
-    for (i = 0; i < slides.length; i++) {
-        var dot=document.createElement("span");
-        dot.classList.add("dots");
-        dotsContainer.append(dot);
-        dot.setAttribute("onclick","moveSlide("+i+")");
-        dots.push(dot);
-    }
-    dots[slideIndex].classList.add("active");
-}
-initGallery();
-function plusSlides(n) {
-    moveSlide(slideIndex+n);
-}
-function moveSlide(n){
-    var i;
-    var current,next;
-    var moveSlideAnimClass={
-          forCurrent:"",
-          forNext:""
-    };
-    var slideTextAnimClass;
-    if(n>slideIndex) {
-        if(n >= slides.length){n=0;}
-        moveSlideAnimClass.forCurrent="moveLeftCurrentSlide";
-        moveSlideAnimClass.forNext="moveLeftNextSlide";
-        slideTextAnimClass="slideTextFromTop";
-    }else if(n<slideIndex){
-        if(n<0){n=slides.length-1;}
-        moveSlideAnimClass.forCurrent="moveRightCurrentSlide";
-        moveSlideAnimClass.forNext="moveRightPrevSlide";
-        slideTextAnimClass="slideTextFromBottom";
-    }
-
-    if(n!=slideIndex){
-        next = slides[n];
-        current=slides[slideIndex];
+      }
+      
+    var slideIndex,slides,dots,captionText;
+    function initGallery(){
+        slideIndex = 0;
+        slides=document.getElementsByClassName("imageHolder");
+        slides[slideIndex].style.opacity=1;
+    
+        captionText=document.querySelector(".captionTextHolder .captionText");
+        captionText.innerText=slides[slideIndex].querySelector(".captionText").innerText;
+    
+        //disable nextPrevBtn if slide count is one
+        if(slides.length<2){
+            var nextPrevBtns=document.querySelector(".leftArrow,.rightArrow");
+            nextPrevBtns.style.display="none";
+            for (i = 0; i < nextPrevBtn.length; i++) {
+                nextPrevBtn[i].style.display="none";
+            }
+        }
+    
+        //add dots
+        dots=[];
+        var dotsContainer=document.getElementById("dotsContainer"),i;
         for (i = 0; i < slides.length; i++) {
-            slides[i].className = "imageHolder";
-            slides[i].style.opacity=0;
-            dots[i].classList.remove("active");
+            var dot=document.createElement("span");
+            dot.classList.add("dots");
+            dotsContainer.append(dot);
+            dot.setAttribute("onclick","moveSlide("+i+")");
+            dots.push(dot);
         }
-        current.classList.add(moveSlideAnimClass.forCurrent);
-        next.classList.add(moveSlideAnimClass.forNext);
-        dots[n].classList.add("active");
-        slideIndex=n;
-        captionText.style.display="none";
-        captionText.className="captionText "+slideTextAnimClass;
-        captionText.innerText=slides[n].querySelector(".captionText").innerText;
-        captionText.style.display="block";
+        dots[slideIndex].classList.add("active");
     }
-
-}
-const hamburger=document.querySelector(".hamburger");
-const navList=document.querySelector(".nav-list");
-hamburger.addEventListener('click',()=>{
-    navList.classList.toggle("active");
-})
-var timer=null;
-function setTimer(){
-    timer=setInterval(function () {
-        plusSlides(1) ;
-    },3000);
-}
-setTimer();
-function playPauseSlides() {
-    var playPauseBtn=document.getElementById("playPause");
-    if(timer==null){
-        setTimer();
-        playPauseBtn.style.backgroundPositionY="0px"
-    }else{
-        clearInterval(timer);
-        timer=null;
-        playPauseBtn.style.backgroundPositionY="-33px"
+    initGallery();
+    function plusSlides(n) {
+        moveSlide(slideIndex+n);
     }
-}
-(function () {
-    const second = 1000,
-          minute = second * 60,
-          hour = minute * 60,
-          day = hour * 24;
-  
-    //I'm adding this section so I don't have to keep updating this pen every year :-)
-    //remove this if you don't need it
-    let today = new Date(),
-        dd = String(today.getDate()).padStart(2, "0"),
-        mm = String(today.getMonth() + 1).padStart(2, "0"),
-        yyyy = today.getFullYear(),
-        nextYear = yyyy ,
-        dayMonth = "11/25/",
-        birthday = dayMonth + yyyy;
+    function moveSlide(n){
+        var i;
+        var current,next;
+        var moveSlideAnimClass={
+              forCurrent:"",
+              forNext:""
+        };
+        var slideTextAnimClass;
+        if(n>slideIndex) {
+            if(n >= slides.length){n=0;}
+            moveSlideAnimClass.forCurrent="moveLeftCurrentSlide";
+            moveSlideAnimClass.forNext="moveLeftNextSlide";
+            slideTextAnimClass="slideTextFromTop";
+        }else if(n<slideIndex){
+            if(n<0){n=slides.length-1;}
+            moveSlideAnimClass.forCurrent="moveRightCurrentSlide";
+            moveSlideAnimClass.forNext="moveRightPrevSlide";
+            slideTextAnimClass="slideTextFromBottom";
+        }
     
-    today = mm + "/" + dd + "/" + yyyy;
-    if (today > birthday) {
-      birthday = dayMonth + nextYear;
+        if(n!=slideIndex){
+            next = slides[n];
+            current=slides[slideIndex];
+            for (i = 0; i < slides.length; i++) {
+                slides[i].className = "imageHolder";
+                slides[i].style.opacity=0;
+                dots[i].classList.remove("active");
+            }
+            current.classList.add(moveSlideAnimClass.forCurrent);
+            next.classList.add(moveSlideAnimClass.forNext);
+            dots[n].classList.add("active");
+            slideIndex=n;
+            captionText.style.display="none";
+            captionText.className="captionText "+slideTextAnimClass;
+            captionText.innerText=slides[n].querySelector(".captionText").innerText;
+            captionText.style.display="block";
+        }
+    
     }
-    //end
+    var timer=null;
+    function setTimer(){
+        timer=setInterval(function () {
+            plusSlides(1) ;
+        },3000);
+    }
+    setTimer();
+    function playPauseSlides() {
+        var playPauseBtn=document.getElementById("playPause");
+        if(timer==null){
+            setTimer();
+            playPauseBtn.style.backgroundPositionY="0px"
+        }else{
+            clearInterval(timer);
+            timer=null;
+            playPauseBtn.style.backgroundPositionY="-33px"
+        }
+    }
+    (function () {
+        const second = 1000,
+              minute = second * 60,
+              hour = minute * 60,
+              day = hour * 24;
+      
+        //I'm adding this section so I don't have to keep updating this pen every year :-)
+        //remove this if you don't need it
+        let today = new Date(),
+            dd = String(today.getDate()).padStart(2, "0"),
+            mm = String(today.getMonth() + 1).padStart(2, "0"),
+            yyyy = today.getFullYear(),
+            nextYear = yyyy ,
+            dayMonth = "11/25/",
+            birthday = dayMonth + yyyy;
+        
+        today = mm + "/" + dd + "/" + yyyy;
+        if (today > birthday) {
+          birthday = dayMonth + nextYear;
+        }
+        //end
+        
+        const countDown = new Date(birthday).getTime(),
+            x = setInterval(function() {    
+      
+              const now = new Date().getTime(),
+                    distance = countDown - now;
+      
+              document.getElementById("days").innerText = Math.floor(distance / (day)),
+                document.getElementById("hours").innerText = Math.floor((distance % (day)) / (hour)),
+                document.getElementById("minutes").innerText = Math.floor((distance % (hour)) / (minute)),
+                document.getElementById("seconds").innerText = Math.floor((distance % (minute)) / second);
+      
+              //do something later when date is reached
+           git 
+              //seconds
+            }, 0)
+        }());
     
-    const countDown = new Date(birthday).getTime(),
-        x = setInterval(function() {    
-  
-          const now = new Date().getTime(),
-                distance = countDown - now;
-  
-          document.getElementById("days").innerText = Math.floor(distance / (day)),
-            document.getElementById("hours").innerText = Math.floor((distance % (day)) / (hour)),
-            document.getElementById("minutes").innerText = Math.floor((distance % (hour)) / (minute)),
-            document.getElementById("seconds").innerText = Math.floor((distance % (minute)) / second);
-  
-          //do something later when date is reached
-    
-          //seconds
-        }, 0)
-    }());
